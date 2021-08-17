@@ -11,10 +11,12 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import javax.inject.Inject;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.ibatis.annotations.Param;
 import org.springframework.core.io.FileSystemResource;
 import org.springframework.core.io.Resource;
 import org.springframework.http.HttpHeaders;
@@ -30,10 +32,14 @@ import org.springframework.web.multipart.MultipartFile;
 
 import kr.pcolor.domain.AttachFileVO;
 import kr.pcolor.domain.resultVO;
+import kr.pcolor.mapper.UserMapper;
 
 @Controller
 public class UploadController {
 
+	@Inject
+	UserMapper userMapper;
+	
 	@GetMapping("/uploadForm.do")
 	public void uploadForm() {
 
@@ -129,11 +135,12 @@ public class UploadController {
 		// String ipAddress=request.getRemoteAddr();
 		// System.out.println("클라이언트 IP 주소: "+ipAddress);
 		// String flaskUrl = "http://"+ipAddress+":5000/personal?imgurl="+filename+"&user_id="+userid;
-		String flaskUrl = "http://192.168.6.37:5000/personal?imgurl="+filename+"&user_id="+userid;
+		String flaskUrl = "http://192.168.6.37:5000/personal?imgname="+filename+"&user_id="+userid;
 		System.out.println(flaskUrl);
 
 		return "redirect:" + flaskUrl;
 	}
+	
 	
 	@RequestMapping("/uploadFormActionCloths.do")
 	public String uploadFormActionCloths(MultipartFile[] uploadFile, Model model, String user_id, HttpServletRequest request, HttpServletResponse response)
@@ -187,10 +194,20 @@ public class UploadController {
 		// String ipAddress=request.getRemoteAddr();
 		// System.out.println("클라이언트 IP 주소: "+ipAddress);
 		
-		String flaskUrl = "http://192.168.6.37:5000/cloths?imgurl="+filename+"&user_id="+userid;
+		String flaskUrl = "http://192.168.6.37:5000/cloths?imgname="+filename+"&user_id="+user_id;
 		System.out.println(flaskUrl);
 
-		return "redirect:" + flaskUrl;
+		return "redirect:"+flaskUrl;
+	}
+	@RequestMapping("/insertPcolor.do")
+	public String insertPcolor(String imgname, String user_id, String pc_idx) {
+		System.out.println(pc_idx);
+		int i = Integer.parseInt(pc_idx);
+		userMapper.insertResult(user_id, i);
+		userMapper.insertUserPcolor(user_id, i);
+		
+		String flaskUrl = "http://192.168.6.37:8081/idol/pcolorResult"+pc_idx+".do?user_id="+user_id+"&imgname="+imgname;
+		return "redirect:"+flaskUrl;
 	}
 
 }

@@ -70,7 +70,7 @@
 	</script>
 </head>
 <body>
-	<div id="div_load_image" style="position:absolute; top:50%; left:50%;width:0px;height:0px; z-index:9999; background:#f0f0f0; filter:alpha(opacity=50); opacity:alpha*0.5; margin:auto; padding:0; text-align:center"> <img src="${pageContext.request.contextPath}/resources/images/loadingbar3.gif" style="width:200px; height:200px;"> </div>
+	<div id="div_load_image" style="position:absolute; top:50%; left:44%;width:0px;height:0px; z-index:9999; background:#f0f0f0; filter:alpha(opacity=50); opacity:alpha*0.5; margin:auto; padding:0; text-align:center"> <img src="${pageContext.request.contextPath}/resources/images/loadingbar3.gif" style="width:200px; height:200px;"> </div>
 	<div class="page">
 	<nav id="colorlib-main-nav" role="navigation">
       <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle active"><i></i></a>

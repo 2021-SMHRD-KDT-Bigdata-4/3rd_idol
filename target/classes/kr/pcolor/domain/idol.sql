@@ -17,13 +17,6 @@ SELECT * FROM tbl_item;
 SELECT * FROM tbl_result;
 SELECT * FROM tbl_reply;
 
-<<<<<<< HEAD
-
-=======
-
--- 사용자 진단결과 톤을 SELECT하기 위한 쿼리문
-SELECT DISTINCT pc_name FROM tbl_result r, tbl_pcolor p WHERE r.pc_idx = p.pc_idx AND user_id = 'admin'
-
 -- tbl_user 생성
 CREATE TABLE tbl_user(
     user_id              VARCHAR(30) NOT NULL,
@@ -36,7 +29,6 @@ CREATE TABLE tbl_user(
     FOREIGN KEY(pc_idx) REFERENCES tbl_pcolor(pc_idx)
 );
 
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-Bigdata-4/3rd_idol.git
 -- tbl_pcolor 생성
 CREATE TABLE tbl_pcolor (
     pc_idx           INT(20) NOT NULL auto_increment, -- pc_idx 1 : 봄웜 / pc_idx 2 : 여쿨 / pc_idx 3 : 가웜 / pc_idx 4 : 겨쿨
@@ -55,7 +47,7 @@ CREATE TABLE tbl_pccs (
     PRIMARY KEY(pccs_idx),
     FOREIGN KEY(pc_idx) REFERENCES tbl_pcolor(pc_idx)
 );
-
+select * from tbl_user
 -- tbl_user 생성
 CREATE TABLE tbl_user(
     user_id              VARCHAR(30) NOT NULL,
@@ -252,15 +244,6 @@ INSERT INTO tbl_item(item_category, item_img_url, item_name, item_tag, item_expl
    상징하는 평온하고 차분한 남성 이미지의 세련된 향입니다.', 
    'https://www.oliveyoung.co.kr/store/G.do?goodsNo=A000000148147',
    4);
-<<<<<<< HEAD
-=======
    
-   
-INSERT INTO tbl_result(pc_idx, user_id) VALUES(1, 'admin');
--- INSERT INTO tbl_result(pc_idx, user_id) VALUES(2, 'jongwon');
--- INSERT INTO tbl_result(pc_idx, user_id) VALUES(3, 'youngjoo');
--- INSERT INTO tbl_result(pc_idx, user_id) VALUES(4, 'onyu');
-
-insert into tbl_reply (reply_text,user_id) values('댓글','admin');
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-Bigdata-4/3rd_idol.git
-   
+   select * from tbl_result
+   select * from tbl_user

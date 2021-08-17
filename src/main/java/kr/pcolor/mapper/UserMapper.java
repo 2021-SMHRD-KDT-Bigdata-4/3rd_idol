@@ -5,6 +5,7 @@ import java.util.List;
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 
@@ -36,4 +37,11 @@ public interface UserMapper {
     
 	@Select("select pc_idx from tbl_user where user_id = #{user_id}")
     public int goResult(String user_id);
+	
+	@Insert("insert into tbl_result(pc_idx, user_id) values(#{pc_idx}, #{user_id})")
+    public void insertResult(@Param("user_id") String user_id, @Param("pc_idx") int pc_idx);
+	
+	@Insert("update tbl_user set pc_idx=#{pc_idx} where (user_id=#{user_id})")
+    public void insertUserPcolor(@Param("user_id") String user_id, @Param("pc_idx") int pc_idx);
+	
 }
