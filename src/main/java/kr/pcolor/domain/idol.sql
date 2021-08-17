@@ -112,6 +112,7 @@ CREATE TABLE tbl_reply(
    PRIMARY KEY(reply_idx),
    FOREIGN KEY(user_id) REFERENCES tbl_user(user_id),
    FOREIGN KEY(board_idx) REFERENCES tbl_board(board_idx)
+   on delete cascade
 );
 
 -- table 데이터 삽입

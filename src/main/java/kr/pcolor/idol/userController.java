@@ -90,8 +90,10 @@ public class userController {
       return "redirect:/mypage.do?user_id="+vo.getUser_id();//수정페이지에서 현재로그인 한 사람의 아이디를 기준을 검색해서 update페이지에서 보여주는데 수정을 하고나면 그 아이디값을 보내지 않아서 안나왔던것같아요
    }
    @RequestMapping("userDelete.do")
-   public String userDelete(String user_id) {
-      userMapper.userDelete(user_id);   
+   public String userDelete(String user_id, HttpServletRequest request) throws ServletException, IOException {
+      userMapper.userDelete(user_id); 
+      HttpSession session = request.getSession(); 
+      session.invalidate();
       return "redirect:/home.do";
    }
 //   @RequestMapping("userCheck.do")

@@ -74,6 +74,9 @@
          }
       });
    }
+   $(document).ready(function() {
+	   $('html, body').animate({scrollTop:$(#come).position().top}, 'slow');
+	}); 
 </script>
 
 </head>
@@ -145,7 +148,7 @@
          </section>
 
          <section class="ftco-section ftco-no-pb ftco-no-pt">
-            <div class="container-fluid px-0">
+            <div class="container-fluid px-0" id="come">
                <div class="row no-gutters">
 
                   <div class="col-md-12 blog-wrap" style="text-align: center;">
@@ -155,8 +158,8 @@
                         </div>
                         <div class="col-md-6">
                            <div class="text p-md-5 p-4 ftco-animate">
-                              <h2 class="mb-4"><a>의상 진단의 결과는?!</a></h2>
-                              <br><br><br>
+                              <h2 class="mb-4"><a>당신의 의상 진단의 결과</a></h2>
+                              <br>
                               <div class="progress" style="height: 50%">
                                  <b style="font-size: 15px; width: 10%;">봄 웜</b>
                                  <div class="progress-bar progress-bar-striped"
@@ -184,6 +187,9 @@
                                     role="progressbar" style="width: <%=winter%>%;" aria-valuenow="75"
                                     aria-valuemin="0" aria-valuemax="100"><%=winter%>%</div>
                               </div>
+                              <br><br>
+                              <p>웜톤인 분들에게 잘 어울리는 옷 색상은 밝은 그린이나 오렌지 색상인<br>색감이 있는 옷들이 잘 어울리고 블랙 앤 화이트도 잘 어울립니다.</p>
+                              <p>쿨톤인 분들은 밝은 톤에 여러 가지 색상이 잘 어울리고<br> 네이비색이나 블랙 앤 화이트 컬러가 잘 어울립니다.</p>
 
                            </div>
                         </div>

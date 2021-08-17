@@ -45,5 +45,8 @@ public interface BoardMapper {
     @Delete("delete from tbl_reply where reply_idx=#{reply_idx}")
     public void replyDelete(int reply_idx);
     
+    @Delete("delete from tbl_reply where board_idx=#{board_idx}")
+    public void boardreplyDelete(int board_idx);
+    
 
 }

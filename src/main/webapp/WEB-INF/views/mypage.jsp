@@ -48,8 +48,13 @@
                 $.ajax({
                    url : "userDelete.do",
                     data : {"user_id":user_id},
-                    success : function(data){                    
-                          location.href="home.do"; 
+                    success : function(data){  
+                    	 if (confirm("정말 삭제하시겠습니까??") == true){    //확인
+                    	     document.removefrm.submit();
+                    	     location.href="home.do";
+                    	 }else{   //취소
+                    	     return false;
+                    	 }                       
                     },       
                     error : function(){alert("error");}            
                 });

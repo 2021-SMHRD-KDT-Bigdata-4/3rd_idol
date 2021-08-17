@@ -121,45 +121,49 @@
 	    		<div class="row no-gutters">
 	    		
 	    			<div class="col-md-12 blog-wrap" style="text-align: center;">
-							<div class="row no-gutters align-items-center">
-								<div class="col-md-6 img js-fullheight">
-									<img style="height: 80%; width: 80%;" alt="의상이미지" src="${pageContext.request.contextPath}/resources/images/result/<%=imgname%>">	
-								</div>
-								<div class="col-md-6">
-									<div class="text p-md-5 p-4 ftco-animate">
-										<h2 class="mb-4"><a>의상 진단의 결과는?!</a></h2>
-										<div class="progress" style="height: 50%">
-											<b style="font-size: 15px; width: 10%;">봄 웜</b>
-											<div class="progress-bar progress-bar-striped"
-												role="progressbar" style="width: <%=spring%>%;" aria-valuenow="10"
-												aria-valuemin="0" aria-valuemax="100"><%=spring%>%</div>
-										</div>
-										<br>
-										<div class="progress" style="height: 50%">
-											<b style="font-size: 15px; width: 10%;">여름 쿨</b>
-											<div class="progress-bar progress-bar-striped bg-success"
-												role="progressbar" style="width: <%=summer%>%;" aria-valuenow="25"
-												aria-valuemin="0" aria-valuemax="100"><%=summer%>%</div>
-										</div>
-										<br>
-										<div class="progress" style="height: 50%">
-											<b style="font-size: 15px; width: 10%;">가을 웜</b>
-											<div class="progress-bar progress-bar-striped bg-info"
-												role="progressbar" style="width: <%=fall%>%;" aria-valuenow="50"
-												aria-valuemin="0" aria-valuemax="100"><%=fall%>%</div>
-										</div>
-										<br>
-										<div class="progress" style="height: 50%">
-											<b style="font-size: 15px; width: 10%;">겨울 쿨</b>
-											<div class="progress-bar progress-bar-striped bg-warning"
-												role="progressbar" style="width: <%=winter%>%;" aria-valuenow="75"
-												aria-valuemin="0" aria-valuemax="100"><%=winter%>%</div>
-										</div>
+                     <div class="row no-gutters align-items-center">
+                        <div class="col-md-6 img js-fullheight">
+                           <img style="height: 80%; width: 80%;" alt="의상이미지" src="${pageContext.request.contextPath}/resources/images/result/<%=imgname%>">   
+                        </div>
+                        <div class="col-md-6">
+                           <div class="text p-md-5 p-4 ftco-animate">
+                              <h2 class="mb-4"><a>당신의 의상 진단의 결과</a></h2>
+                              <br>
+                              <div class="progress" style="height: 50%">
+                                 <b style="font-size: 15px; width: 10%;">봄 웜</b>
+                                 <div class="progress-bar progress-bar-striped"
+                                    role="progressbar" style="width: <%=spring%>%;" aria-valuenow="10"
+                                    aria-valuemin="0" aria-valuemax="100"><%=spring%>%</div>
+                              </div>
+                              <br>
+                              <div class="progress" style="height: 50%">
+                                 <b style="font-size: 15px; width: 10%;">여름 쿨</b>
+                                 <div class="progress-bar progress-bar-striped bg-success"
+                                    role="progressbar" style="width: <%=summer%>%;" aria-valuenow="25"
+                                    aria-valuemin="0" aria-valuemax="100"><%=summer%>%</div>
+                              </div>
+                              <br>
+                              <div class="progress" style="height: 50%">
+                                 <b style="font-size: 15px; width: 10%;">가을 웜</b>
+                                 <div class="progress-bar progress-bar-striped bg-info"
+                                    role="progressbar" style="width: <%=fall%>%;" aria-valuenow="50"
+                                    aria-valuemin="0" aria-valuemax="100"><%=fall%>%</div>
+                              </div>
+                              <br>
+                              <div class="progress" style="height: 50%">
+                                 <b style="font-size: 15px; width: 10%;">겨울 쿨</b>
+                                 <div class="progress-bar progress-bar-striped bg-warning"
+                                    role="progressbar" style="width: <%=winter%>%;" aria-valuenow="75"
+                                    aria-valuemin="0" aria-valuemax="100"><%=winter%>%</div>
+                              </div>
+                              <br><br>
+                              <p>웜톤인 분들에게 잘 어울리는 옷 색상은 밝은 그린이나 오렌지 색상인<br>색감이 있는 옷들이 잘 어울리고 블랙 앤 화이트도 잘 어울립니다.</p>
+                              <p>쿨톤인 분들은 밝은 톤에 여러 가지 색상이 잘 어울리고<br> 네이비색이나 블랙 앤 화이트 컬러가 잘 어울립니다.</p>
 
-									</div>
-								</div>
-							</div>
-						</div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
 	    			
 	    			<!-- 작업공간 -->
 		   			

@@ -49,7 +49,8 @@ public class boardController {
    
    @RequestMapping("/boardDelete.do")
       public String boardDelete(int board_idx) {
-      boardMapper.boardDelete(board_idx);            
+      boardMapper.boardDelete(board_idx); 
+      boardMapper.boardreplyDelete(board_idx);
       return "redirect:/boardList.do";
    }   
    @RequestMapping("/boardUpdate.do")
