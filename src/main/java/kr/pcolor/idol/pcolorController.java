@@ -26,6 +26,28 @@ public class pcolorController {
 	 * Model model) { ItemVO vo = pcolorMapper.pcolorResult1(pc_idx);
 	 * model.addAttribute("vo", vo); }
 	 */
+	@RequestMapping("/pcolorResult1_1.do")
+	public void pcolorResult1_1(Model model) {
+		List<ItemVO> list = pcolorMapper.pcolorResult1();
+		model.addAttribute("list", list);
+	}
+	
+	@RequestMapping("/pcolorResult2_1.do")
+	public void pcolorResult2_1(Model model) {
+		List<ItemVO> list = pcolorMapper.pcolorResult2();
+		model.addAttribute("list", list);
+	}
+	@RequestMapping("/pcolorResult3_1.do")
+	public void pcolorResult3_1(Model model) {
+		List<ItemVO> list = pcolorMapper.pcolorResult3();
+		model.addAttribute("list", list);
+	}
+	@RequestMapping("/pcolorResult4_1.do")
+	public void pcolorResult4_1(Model model) {
+		List<ItemVO> list = pcolorMapper.pcolorResult4();
+		model.addAttribute("list", list);
+	}
+	
 	@RequestMapping("/pcolorResult1.do")
 	public void pcolorResult1(Model model) {
 		List<ItemVO> list = pcolorMapper.pcolorResult1();

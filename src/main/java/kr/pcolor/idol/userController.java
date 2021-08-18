@@ -106,13 +106,13 @@ public class userController {
 	   int result = userMapper.goResult(user_id);
 	   UserVO vo = userMapper.userList(user_id);
 	   		if(result==1) {
-	   			return "redirect:/pcolorResult1.do?user_id="+user_id;
+	   			return "redirect:/pcolorResult1_1.do?user_id="+user_id;
 	   		}else if(result==2){
-	   			return "redirect:/pcolorResult2.do?user_id="+user_id;
+	   			return "redirect:/pcolorResult2_1.do?user_id="+user_id;
 	   		}else if(result==3) {
-	   			return "redirect:/pcolorResult3.do?user_id="+user_id;
+	   			return "redirect:/pcolorResult3_1.do?user_id="+user_id;
 	   		}else {
-	   			return "redirect:/pcolorResult4.do?user_id="+user_id;
+	   			return "redirect:/pcolorResult4_1.do?user_id="+user_id;
 	   		}
    }
    

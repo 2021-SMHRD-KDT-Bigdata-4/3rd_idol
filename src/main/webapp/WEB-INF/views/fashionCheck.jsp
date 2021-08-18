@@ -43,7 +43,7 @@
 		    $(document).ready(function() {
 				$("#div_load_image").hide();
 				$('#take').submit(function(){					
-				$("#div_load_image").show();
+					$("#div_load_image").show();
 				});
 	          });
 	</script>
@@ -70,7 +70,6 @@
       </div>
     </nav>
 	 <div id="colorlib-page">
-	 <div id="div_load_image" style="position:absolute; top:50%; left:44%; width:0px;height:0px; z-index:9999; background:#f0f0f0; filter:alpha(opacity=50); opacity:alpha*0.5; margin:auto; padding:0; text-align:center"> <img src="${pageContext.request.contextPath}/resources/images/loadingbar3.gif" style="width:200px; height:200px;"> </div>
       <header>
          <div class="container">
            <div class="colorlib-navbar-brand">
