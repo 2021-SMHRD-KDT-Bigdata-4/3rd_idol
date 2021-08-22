@@ -48,6 +48,7 @@ CREATE TABLE tbl_pccs (
     FOREIGN KEY(pc_idx) REFERENCES tbl_pcolor(pc_idx)
 );
 select * from tbl_user
+
 -- tbl_user 생성
 CREATE TABLE tbl_user(
     user_id              VARCHAR(30) NOT NULL,
@@ -117,32 +118,39 @@ CREATE TABLE tbl_reply(
 
 -- table 데이터 삽입
 INSERT INTO tbl_pcolor(pc_name, pc_contents) VALUES('봄웜', '따뜻한 봄날의 향기');
-INSERT INTO tbl_pcolor(pc_name, pc_contents) VALUES('여쿨', '시원한 여름 밤');
-INSERT INTO tbl_pcolor(pc_name, pc_contents) VALUES('가웜', '가을의 높은 하늘');
-INSERT INTO tbl_pcolor(pc_name, pc_contents) VALUES('겨쿨', '겨울의 시원한 날');
+INSERT INTO tbl_pcolor(pc_name, pc_contents) VALUES('여름쿨', '시원한 여름 밤');
+INSERT INTO tbl_pcolor(pc_name, pc_contents) VALUES('가을웜', '가을의 높은 하늘');
+INSERT INTO tbl_pcolor(pc_name, pc_contents) VALUES('겨울쿨', '겨울의 시원한 날');
+
 INSERT INTO tbl_pccs(pccs_name, pc_idx) VALUES('보라색', 1);
 INSERT INTO tbl_pccs(pccs_name, pc_idx) VALUES('남색', 2);
 INSERT INTO tbl_pccs(pccs_name, pc_idx) VALUES('카키색', 3);
-INSERT INTO tbl_pccs(pccs_name, pc_idx) VALUES('파란', 4);
+INSERT INTO tbl_pccs(pccs_name, pc_idx) VALUES('파란색', 4);
+
 INSERT INTO tbl_user(user_id, user_password, user_name, user_age, user_gender,pc_idx) VALUES('admin', '12345', '아무개', '26', '남자','1');
 INSERT INTO tbl_user(user_id, user_password, user_name, user_age, user_gender,pc_idx) VALUES('jongwon', '12345', '정종원', '27', '남자','1');
 INSERT INTO tbl_user(user_id, user_password, user_name, user_age, user_gender,pc_idx) VALUES('youngjoo', '12345', '김영주', '26', '여자','2');
 INSERT INTO tbl_user(user_id, user_password, user_name, user_age, user_gender,pc_idx) VALUES('onyu', '12345', '김온유', '26', '여자','3');
 INSERT INTO tbl_user(user_id, user_password, user_name, user_age, user_gender,pc_idx) VALUES('junhyuck', '12345', '이준혁', '28', '남자','4');
 INSERT INTO tbl_user(user_id, user_password, user_name, user_age, user_gender,pc_idx) VALUES('gangjoon', '12345', '최강준', '26', '남자','3');
-INSERT INTO tbl_board(board_title, board_contents, user_id) VALUES('안녕하세요', '유익한 사이트예요.', 'admin');
+
 INSERT INTO tbl_board(board_title, board_contents, user_id) VALUES('안녕하세요', '처음 가입해서 글 좀 올립니다.', 'youngjoo');
+INSERT INTO tbl_board(board_title, board_contents, user_id) VALUES('안녕하세요', '퍼스널 컬러가 뭔지 궁금해서 가입해봐요!', 'admin');
+INSERT INTO tbl_board(board_title, board_contents, user_id) VALUES('퍼스널 컬러 진단 공유', '제가 이번에 여기 사이트에서 퍼스널 컬러를 진단하고 의상 추천까지 받아서 옷을 사봤는데요. 저한테 아주 잘 어울리더라구요', 'youngjoo');
 INSERT INTO tbl_board(board_title, board_contents, user_id) VALUES('안녕하세요', '저는 겨울쿨이네요!!', 'jongwon');
 INSERT INTO tbl_board(board_title, board_contents, user_id) VALUES('안녕하세요', '저 봄웜인가요?', 'onyu');
-INSERT INTO tbl_board(board_title, board_contents, user_id) VALUES('안녕하세요', '게시판 테스트!', 'junhyuck');
-INSERT INTO tbl_board(board_title, board_contents, user_id) VALUES('안녕하세요', '정말 유용한 사이트예요 감사합니다', 'gangjoon');
-INSERT INTO tbl_board(board_title, board_contents, user_id) VALUES('안녕하세요', '처음 가입해서 글 좀 올립니다.', 'admin');
-INSERT INTO tbl_reply(reply_text,user_id,board_idx) VALUES ('쌉노잼 페이지네요 다시 만들어주세요','admin','1');
+INSERT INTO tbl_board(board_title, board_contents, user_id) VALUES('일상 패션 추천좀요', '여기 사이트에서는 봄 웜이라고 하는데 잘 모르겠어요 ㅠㅠ 추천좀...', 'junhyuck');
+INSERT INTO tbl_board(board_title, board_contents, user_id) VALUES('진단 받고 새로 산 아이템 후기', '이번에 진단 받고 새로 산 옷을 입고 친구들이랑 만났더니 오늘따라 이뻐보인다고 칭찬 받았어요 ㅎㅎ', 'gangjoon');
+
+
+INSERT INTO tbl_reply(reply_text,user_id,board_idx) VALUES ('의상 컬러 적합도 진단 ㄱㄱ','junhyuck','6');
+INSERT INTO tbl_reply(reply_text,user_id,board_idx) VALUES ('오 한 번 의상진단 해보니까 괜찮음','jongwon','6');
+INSERT INTO tbl_reply(reply_text,user_id,board_idx) VALUES ('의상 컬러 적합도 진단 해보세요','junhyuck','6');
 
 -- item_향수_insert_data
 INSERT INTO tbl_item(item_category, item_img_url, item_name, item_tag, item_explain, item_product_url, pc_idx) 
    VALUES( '향수', 
-   'https://image.msscdn.net/images/goods_img/20200507/1434514/1434514_6_500.jpg', 
+   'https://image.msscdn.net/images/goods_img/20200507/1434514/1434514_6_500.jpg',
    '포맨트 포맨 시그니처 퍼퓸 코튼허그', 
    '# 부드러운', 
    '이성에게서 나는 가장 선호하는 향 1위, 코튼향 자꾸만 안기고 싶은 포근함 공기 중에 퍼지는 뮤게의 깨끗함과 머스크의 부드러움', 
@@ -246,5 +254,3 @@ INSERT INTO tbl_item(item_category, item_img_url, item_name, item_tag, item_expl
    'https://www.oliveyoung.co.kr/store/G.do?goodsNo=A000000148147',
    4);
    
-   select * from tbl_result
-   select * from tbl_user

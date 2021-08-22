@@ -110,7 +110,7 @@ public class userController {
 	   		}else if(result==2){
 	   			return "redirect:/pcolorResult2.do?user_id="+user_id;
 	   		}else if(result==3) {
-	   			return "redirect:/pcolorResult3.do?user_id="+user_id;
+	   			return "redirect:/pcolorResult3_1.do?user_id="+user_id;
 	   		}else {
 	   			return "redirect:/pcolorResult4.do?user_id="+user_id;
 	   		}

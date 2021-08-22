@@ -117,25 +117,6 @@
 
        <section class="ftco-section ftco-no-pb ftco-no-pt">
        
-			<div class="col-md-12 blog-wrap" style="text-align: center;">
-            		<br>
-	               <div class="row no-gutters align-items-center">
-	                  <img style="height: 50%; width: 50%;" alt="얼굴이미지" src="${pageContext.request.contextPath}/resources/images/result/<%=imgname%>">
-	                  <div class="col-md-6">
-	                     <div class="text p-md-5 p-4 ftco-animate">
-                  <h2 class="mb-4">당신의 퍼스널 컬러는</h2>
-                  <h2 class="mb-4">'가을 웜톤' 입니다.</h2>
-                  <p>가을 웜톤인 사람은 클래식하고 깊고 풍성한 느낌을 가집니다. 
-                  <br>또한 포근하고 부드러우며 차분하고 원숙한 이미지를 지니고 있습니다.
-                  <br>상대방에게 친근함과 편안함을 느끼게 하는 이미지입니다.
-                  <br>가을 타입은 황색을 지닌 따듯한 유형으로 강한 톤, 깊은 톤, 중후한 톤으로 
-                  <br>편안함과 고급스러운 이미지를 느끼게 합니다.
-                  <br>가을 타입은 누르스름한 피부 톤에 혈색이 있습니다.
-                  <br>믿음직스럽고 그윽함이 특징입니다.</p>
-                     </div>
-                  </div>
-               </div>
-            </div>
             <div class="col-md-12 blog-wrap">
                <div class="row no-gutters align-items-center">
                   <div class="col-md-6 img js-fullheight order-md-last" style="background-image: url(${pageContext.request.contextPath}/resources/images/fallSpectrum1.png);">

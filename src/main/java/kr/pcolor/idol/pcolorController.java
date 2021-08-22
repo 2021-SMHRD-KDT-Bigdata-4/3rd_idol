@@ -42,6 +42,11 @@ public class pcolorController {
 		List<ItemVO> list = pcolorMapper.pcolorResult3();
 		model.addAttribute("list", list);
 	}
+	@RequestMapping("/pcolorResult3_1.do")
+	public void pcolorResult3_1(Model model) {
+		List<ItemVO> list = pcolorMapper.pcolorResult3();
+		model.addAttribute("list", list);
+	}
 	@RequestMapping("/pcolorResult4.do")
 	public void pcolorResult4(Model model) {
 		List<ItemVO> list = pcolorMapper.pcolorResult4();

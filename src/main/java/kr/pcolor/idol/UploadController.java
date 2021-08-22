@@ -44,7 +44,9 @@ public class UploadController {
 	public void uploadForm() {
 
 	}
-
+	
+	String ip = "220.80.88.95";
+	
 	private String getFolder() {
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 		Date date = new Date();
@@ -135,12 +137,11 @@ public class UploadController {
 		// String ipAddress=request.getRemoteAddr();
 		// System.out.println("클라이언트 IP 주소: "+ipAddress);
 		// String flaskUrl = "http://"+ipAddress+":5000/personal?imgurl="+filename+"&user_id="+userid;
-		String flaskUrl = "http://192.168.6.37:5000/personal?imgname="+filename+"&user_id="+userid;
+		String flaskUrl = "http://"+ip+":5000/personal?imgname="+filename+"&user_id="+userid;
 		System.out.println(flaskUrl);
 
 		return "redirect:" + flaskUrl;
 	}
-	
 	
 	@RequestMapping("/uploadFormActionCloths.do")
 	public String uploadFormActionCloths(MultipartFile[] uploadFile, Model model, String user_id, HttpServletRequest request, HttpServletResponse response)
@@ -194,11 +195,12 @@ public class UploadController {
 		// String ipAddress=request.getRemoteAddr();
 		// System.out.println("클라이언트 IP 주소: "+ipAddress);
 		
-		String flaskUrl = "http://192.168.6.37:5000/cloths?imgname="+filename+"&user_id="+user_id;
+		String flaskUrl = "http://"+ip+":5000/cloths?imgname="+filename+"&user_id="+user_id;
 		System.out.println(flaskUrl);
 
 		return "redirect:"+flaskUrl;
 	}
+	
 	@RequestMapping("/insertPcolor.do")
 	public String insertPcolor(String imgname, String user_id, String pc_idx) {
 		System.out.println(pc_idx);
@@ -206,7 +208,7 @@ public class UploadController {
 		userMapper.insertResult(user_id, i);
 		userMapper.insertUserPcolor(user_id, i);
 		
-		String flaskUrl = "http://192.168.6.37:8081/idol/pcolorResult"+pc_idx+".do?user_id="+user_id+"&imgname="+imgname;
+		String flaskUrl = "http://"+ip+":8081/idol/pcolorResult"+pc_idx+".do?user_id="+user_id+"&imgname="+imgname;
 		return "redirect:"+flaskUrl;
 	}
 

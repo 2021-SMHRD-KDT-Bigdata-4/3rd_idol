@@ -118,24 +118,11 @@
        <section class="ftco-section ftco-no-pb ftco-no-pt">
        
 			<div class="col-md-12 blog-wrap" style="text-align: center;">
+				<br>
                <div class="row no-gutters align-items-center">
-                  <div class="col-md-6">
-                     <div class="text p-md-5 p-4 ftco-animate">
-                        <h2 class="mb-4"><a>퍼스널컬러 진단의 결과</a></h2>
-                     </div>
-                  </div>
-                  <div class="col-md-6 img js-fullheight">
-                  	 <br><br><br>
-                     <img style="height: 80%; width: 80%;" alt="얼굴이미지" src="${pageContext.request.contextPath}/resources/images/result/<%=imgname%>">   
-                  </div>
-               </div>
-            </div>
-       
-            <div class="col-md-12 blog-wrap">
-               <div class="row no-gutters align-items-center">
-						<div class="col-md-6 img js-fullheight" style="background-image: url(https://cdn.jsdelivr.net/gh/hoonsbory/mycolor-deploy/images/summerColor.png);"></div>
-                  <div class="col-md-6">
-                     <div class="text p-md-5 p-4 ftco-animate">
+	                  <img style="height: 50%; width: 50%;" alt="얼굴이미지" src="${pageContext.request.contextPath}/resources/images/result/<%=imgname%>">
+	                  <div class="col-md-6">
+	                     <div class="text p-md-5 p-4 ftco-animate">
                   <h2 class="mb-4">당신의 퍼스널 컬러는</h2>
                   <h2 class="mb-4">'여름 쿨톤' 입니다.</h2>
                   <p>여름 쿨톤인 사람은 대체적으로 깨끗한 이미지를 가지고 있습니다.
