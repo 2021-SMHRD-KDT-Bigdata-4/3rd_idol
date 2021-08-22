@@ -1,3 +1,4 @@
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -66,13 +67,13 @@
         <div class="colorlib-table-cell js-fullheight">
           <div class="row no-gutters">
             <div class="col-md-12 text-center">
-              <h1 class="mb-4"><a class="logo" href="home.do">palette</a></h1>
+              <h1 class="mb-4"><a href="index.html" class="logo">palette</a></h1>
               <ul>
                  
                  <jsp:include page="menu.jsp">
                    <jsp:param name="pageSelection" value="2" />
                 </jsp:include>
-                
+                 
               </ul>
             </div>
           </div>
@@ -104,68 +105,63 @@
         </div>
       </header>
 
-      <section class="hero-wrap js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/fall.jpg);">
+      <section class="hero-wrap js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/winter.jpg);">
          <div class="overlay"></div>
          <div class="container-fluid px-0">
            <div class="row no-gutters text align-items-end js-fullheight justify-content-center" data-scrollax-parent="true">
              <div class="col-md-12 ftco-animate text-center">
-               <h1 class="bread">autumn</h1>
+               <h1 class="bread">winter</h1>
              </div>
            </div>
          </div>
       </section>
-
        <section class="ftco-section ftco-no-pb ftco-no-pt">    
-       
             <div class="col-md-12 blog-wrap">
                <div class="row no-gutters align-items-center">
-                  <div class="col-md-6 img js-fullheight" style="background-image: url(https://cdn.jsdelivr.net/gh/hoonsbory/mycolor-deploy/images/fallColor.png);"></div>
+                  <div class="col-md-6 img js-fullheight" style="background-image: url(https://cdn.jsdelivr.net/gh/hoonsbory/mycolor-deploy/images/winterColor.png);"></div>
                   <div class="col-md-6">
                      <div class="text p-md-5 p-4 ftco-animate">
                   <h2 class="mb-4">당신의 퍼스널 컬러는</h2>
-                  <h2 class="mb-4">'가을 웜톤' 입니다.</h2>
-                  <p>가을 웜톤인 사람은 클래식하고 깊고 풍성한 느낌을 가집니다. 
-                  <br>또한 포근하고 부드러우며 차분하고 원숙한 이미지를 지니고 있습니다.
-                  <br>상대방에게 친근함과 편안함을 느끼게 하는 이미지입니다.
-                  <br>가을 타입은 황색을 지닌 따듯한 유형으로 강한 톤, 깊은 톤, 중후한 톤으로 
-                  <br>편안함과 고급스러운 이미지를 느끼게 합니다.
-                  <br>가을 타입은 누르스름한 피부 톤에 혈색이 있습니다.
-                  <br>믿음직스럽고 그윽함이 특징입니다.</p>
+                  <h2 class="mb-4">'겨울 쿨톤' 입니다.</h2>
+                  <p>겨울 쿨톤인 사람은 카리스마 있고 세련된 이미지를 지니는 사람이 많습니다.
+                  <br>전형적인 모던한 스타일로 선명하고 액티브한 이미지를 지니고 있어 도시적인 느낌을 지닌 유형입니다.
+                  <br>겨울 타입은 파랑과 흰색 검정을 지닌 차가운 유형으로 선명 하고 엷은 톤, 어두운 톤의 모던하며 도시적인 강렬함을 느끼게 합니다.
+                  <br>겨울 타입은 핏기가 없어 보일 정도의 투명한 피부 톤을 가집니다.
+                  <br>눈동자는 푸른빛, 갈색빛으로 강렬하고 개성 있으며 카리스마가 있습니다.</p>
                      </div>
                   </div>
                </div>
             </div>
             <div class="col-md-12 blog-wrap">
                <div class="row no-gutters align-items-center">
-                  <div class="col-md-6 img js-fullheight order-md-last" style="background-image: url(${pageContext.request.contextPath}/resources/images/fallSpectrum1.png);">
+                  <div class="col-md-6 img js-fullheight order-md-last" style="background-image: url(${pageContext.request.contextPath}/resources/images/winterSpectrum1.png);">
                   </div>
                   <div class="col-md-6">
                      <div class="text p-md-5 p-4 ftco-animate">
-                        <h2 class="mb-4">'가을 웜'의 컬러 팔레트</h2>
-                        <p>가을 컬러들은 노란색보다 짙은 황색을 지니고 있는 색의 그룹으로 
-                        <br>깊고 강하면서 고급스럽고 편안한 컬러들이 주를 이루며 차분한 이미지를 가지고 있는 팔레트입니다.
-                     <br>가을 타입에게 잘 어울리는 컬러는
-                     <br>아이보리 베이지, 브라운과 같은 진한 톤에서 어두운 톤까지 많은 영역의 컬러를 사용할 수 있습니다.
-                     <br>대표적인 컬러는 살색, 골드 등 가을의 자연에서 흔히 볼 수 있는 컬러입니다.
-                     <br>가을의 컬러는 따듯함과 안정감 편안한 이미지를 줍니다.</p>
+                        <h2 class="mb-4"><a href="blog-single.html">'겨울 쿨'의 컬러 팔레트</a></h2>
+                        <p>겨울 컬러들은 파란색, 흰색, 검정을 내포하고 있는 차갑고 강렬한 컬러들의 그룹입니다.
+                        <br>선명하고 강한  컬러들이 속해 모던하고 도회적인 이미지를 가지고 있는 팔레트입니다.
+                     <br>겨울 타입에게 잘 어울리는 컬러는 
+                     <br>화이트 블랙과 같은 모노톤과 차갑고 선명한 색을 사용할 수 있습니다.
+                     <br>대표적인 컬러는  블루, 핫핑크, 레드, 레몬옐로우, 그린 등  차갑고 강한 컬러들입니다. 
+                     <br>겨울의 컬러는 차가움과 모던함 카리스마 있는 이미지를 줍니다.</p>
                      </div>
                   </div>
                </div>
             </div>
-         <div class="col-md-12 blog-wrap">
+            <div class="col-md-12 blog-wrap">
                <div class="row no-gutters align-items-center">
                   <div class="col-md-6 img js-fullheight">
-                      <c:forEach var="vo" items="${list}" begin="6" end="8" step="1">
-                           <img src = "${vo.item_img_url}" width="300" height="300" style="margin-left: 30%;">
+                      <c:forEach var="vo" items="${list}" begin="9" end="11" step="1">
+                     <img src = "${vo.item_img_url}" width="300" height="300" style="margin-left: 30%;">
                       </c:forEach>
                   </div>
-                  
                   <div class="col-md-6">
                      <div class="text p-md-5 p-4 ftco-animate">
-                     <h2 class="mb-4">'가을 웜'에 어울리는 향수</h2>
+                     <h2 class="mb-4">'겨울 쿨'에 어울리는 향수</h2>
                      <br>
                      <br>
-                        <c:forEach var="vo" items="${list}" begin="6" end="8" step="1">
+                        <c:forEach var="vo" items="${list}" begin="9" end="11" step="1">
                         <div width="300" height="300">
                          <h3 class="mb-4">${vo.item_name}</h3>
                          <p style=" font-size: 12px;">${vo.item_tag}</p>
@@ -180,31 +176,30 @@
             </div>
             <div class="col-md-12 blog-wrap">
                <div class="row no-gutters align-items-center">
-                  <div class="col-md-6 img js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/autumnhair2.jpg);"></div>
+                  <div class="col-md-6 img js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/winterhair2.jpg);"></div>
                   <div class="col-md-6">
                      <div class="text p-md-5 p-4 ftco-animate">
-                        <h2 class="mb-4">'가을 웜 '의 헤어 컬러 추천</h2>
-                        <p>골드 색상을 베이스로 골드 브라운, 갈색 컬러인 미디움, 다크 브라운 등 
-                        <br>봄 웜톤보다는 어두운 계열 브라운의 컬러를 추천해요.
-                        <br>붉은 계열의 버건디나 마르살라는 피하는 것이 좋습니다.
-                        <br>풍성한 웨이브, 갈색, 황색 베이스 염색을 추천합니다.</p>
+                        <h2 class="mb-4">'겨울 쿨'의 헤어 컬러 추천</h2>
+                        <p>블루 베이스의 겨울 쿨톤은
+                        <br>블랙 컬러와 같이 진하고 어두운 컬러가 잘 어울려 본인의 헤어 컬러 그대로를 유지하는 것이 좋지만,
+                        <br>다른 컬러로 염색을 한다면 어떤 컬러든지 전체적으로 톤을 최대한 낮춰서 하는 것이 좋습니다.
+                        <br>또한 와인 계열의 염색이 잘 어울립니다. </p>
                      </div>
                   </div>
                </div>
             </div>
             <div class="col-md-12 blog-wrap">
                <div class="row no-gutters align-items-center">
-                  <div class="col-md-6 img js-fullheight order-md-last" style="background-image: url(${pageContext.request.contextPath}/resources/images/autumnstar2.jpg);"></div>
+                  <div class="col-md-6 img js-fullheight order-md-last" style="background-image: url(${pageContext.request.contextPath}/resources/images/winterstar2.jpg);"></div>
                   <div class="col-md-6">
                      <div class="text p-md-5 p-4 ftco-animate">
-                        <h2 class="mb-4">유사톤을 지닌 '가을 웜' 연예인</h2>
-                        <p>공유, 이진욱, 박성웅, 이민호, 마동석, 전현무</p>
+                        <h2 class="mb-4">유사톤을 지닌 '겨울 쿨' 연예인 </h2>
+                        <p>조정석, 하정우, 김수현, 이동욱, 이정재, 엑소 디오</p>
                      </div>
                   </div>
                </div>
             </div>
        </section>
-
       
          <jsp:include page="footer.jsp">
          <jsp:param name="pageSelection" value="footer" />

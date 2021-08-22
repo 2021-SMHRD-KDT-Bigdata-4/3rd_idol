@@ -42,23 +42,11 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css">
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script type="text/javascript">      
-          function logoutFn(){
-                $.ajax({
-                   url: "logout.do",
-                   type:"get",
-                   success:function(){ 
-                      location.href="home.do"
-                   },
-                  error:function(){alert("error");}         
-                });      
-             }                
-   </script>
     
   </head>
   <body>
 
-    <div class="page">
+   <div class="page">
     <nav id="colorlib-main-nav" role="navigation">
       <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle active"><i></i></a>
       <div class="js-fullheight colorlib-table">
@@ -66,13 +54,13 @@
         <div class="colorlib-table-cell js-fullheight">
           <div class="row no-gutters">
             <div class="col-md-12 text-center">
-              <h1 class="mb-4"><a class="logo" href="home.do">palette</a></h1>
+              <h1 class="mb-4"><a href="home.do" class="logo">palette</a></h1>
               <ul>
                  
                  <jsp:include page="menu.jsp">
                    <jsp:param name="pageSelection" value="2" />
                 </jsp:include>
-                
+
               </ul>
             </div>
           </div>
@@ -103,107 +91,106 @@
            <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
         </div>
       </header>
-
-      <section class="hero-wrap js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/fall.jpg);">
+      
+      <section class="hero-wrap js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/spring.jpg);">
          <div class="overlay"></div>
          <div class="container-fluid px-0">
            <div class="row no-gutters text align-items-end js-fullheight justify-content-center" data-scrollax-parent="true">
              <div class="col-md-12 ftco-animate text-center">
-               <h1 class="bread">autumn</h1>
+               <h1 class="bread">spring</h1>
              </div>
            </div>
          </div>
       </section>
 
-       <section class="ftco-section ftco-no-pb ftco-no-pt">    
-       
+   <section class="ftco-section ftco-no-pb ftco-no-pt">
+   
             <div class="col-md-12 blog-wrap">
                <div class="row no-gutters align-items-center">
-                  <div class="col-md-6 img js-fullheight" style="background-image: url(https://cdn.jsdelivr.net/gh/hoonsbory/mycolor-deploy/images/fallColor.png);"></div>
+                  <div class="col-md-6 img js-fullheight" style="background-image: url(https://cdn.jsdelivr.net/gh/hoonsbory/mycolor-deploy/images/springColor.png);"></div>
                   <div class="col-md-6">
                      <div class="text p-md-5 p-4 ftco-animate">
-                  <h2 class="mb-4">당신의 퍼스널 컬러는</h2>
-                  <h2 class="mb-4">'가을 웜톤' 입니다.</h2>
-                  <p>가을 웜톤인 사람은 클래식하고 깊고 풍성한 느낌을 가집니다. 
-                  <br>또한 포근하고 부드러우며 차분하고 원숙한 이미지를 지니고 있습니다.
-                  <br>상대방에게 친근함과 편안함을 느끼게 하는 이미지입니다.
-                  <br>가을 타입은 황색을 지닌 따듯한 유형으로 강한 톤, 깊은 톤, 중후한 톤으로 
-                  <br>편안함과 고급스러운 이미지를 느끼게 합니다.
-                  <br>가을 타입은 누르스름한 피부 톤에 혈색이 있습니다.
-                  <br>믿음직스럽고 그윽함이 특징입니다.</p>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="col-md-12 blog-wrap">
-               <div class="row no-gutters align-items-center">
-                  <div class="col-md-6 img js-fullheight order-md-last" style="background-image: url(${pageContext.request.contextPath}/resources/images/fallSpectrum1.png);">
-                  </div>
-                  <div class="col-md-6">
-                     <div class="text p-md-5 p-4 ftco-animate">
-                        <h2 class="mb-4">'가을 웜'의 컬러 팔레트</h2>
-                        <p>가을 컬러들은 노란색보다 짙은 황색을 지니고 있는 색의 그룹으로 
-                        <br>깊고 강하면서 고급스럽고 편안한 컬러들이 주를 이루며 차분한 이미지를 가지고 있는 팔레트입니다.
-                     <br>가을 타입에게 잘 어울리는 컬러는
-                     <br>아이보리 베이지, 브라운과 같은 진한 톤에서 어두운 톤까지 많은 영역의 컬러를 사용할 수 있습니다.
-                     <br>대표적인 컬러는 살색, 골드 등 가을의 자연에서 흔히 볼 수 있는 컬러입니다.
-                     <br>가을의 컬러는 따듯함과 안정감 편안한 이미지를 줍니다.</p>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         <div class="col-md-12 blog-wrap">
-               <div class="row no-gutters align-items-center">
-                  <div class="col-md-6 img js-fullheight">
-                      <c:forEach var="vo" items="${list}" begin="6" end="8" step="1">
-                           <img src = "${vo.item_img_url}" width="300" height="300" style="margin-left: 30%;">
-                      </c:forEach>
-                  </div>
-                  
-                  <div class="col-md-6">
-                     <div class="text p-md-5 p-4 ftco-animate">
-                     <h2 class="mb-4">'가을 웜'에 어울리는 향수</h2>
-                     <br>
-                     <br>
-                        <c:forEach var="vo" items="${list}" begin="6" end="8" step="1">
-                        <div width="300" height="300">
-                         <h3 class="mb-4">${vo.item_name}</h3>
-                         <p style=" font-size: 12px;">${vo.item_tag}</p>
-                         <p style=" font-size: 15px;">${vo.item_explain}</p>
-                         <a style=" font-size: 15px;" href="${vo.item_product_url}">${vo.item_product_url}</a>
-                     </div>
-                     <br>
-                     </c:forEach>
+						<h2 class="mb-4">당신의 퍼스널 컬러는</h2>
+						<h2 class="mb-4">'봄 웜' 입니다.</h2>
+						<p>한국인의 많은 사람이 봄 웜톤의 피부색을 가지고 있습니다.
+						<br>봄 웜톤인 사람은 봄의 느낌처럼 밝고 노란빛의 피부를 가지고 있습니다.
+						<br>봄 타입은 노란색을 지닌 따듯한 유형으로
+						<br>선명 하고 밝은 톤과 엷은 톤으로 생동감과 에너지를 느끼게 합니다.
+						<br>피부는 밝으면서 매끄럽고 투명한 분들이 많고 피부가 얇아서 주근깨 같은 잡티가 있는 경우도 있습니다.</p>
                      </div>
                   </div>
                </div>
             </div>
             <div class="col-md-12 blog-wrap">
                <div class="row no-gutters align-items-center">
-                  <div class="col-md-6 img js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/autumnhair2.jpg);"></div>
+                  <div class="col-md-6 img js-fullheight order-md-last" style="background-image: url(${pageContext.request.contextPath}/resources/images/springSpectrum1.png);">
+                  </div>
                   <div class="col-md-6">
                      <div class="text p-md-5 p-4 ftco-animate">
-                        <h2 class="mb-4">'가을 웜 '의 헤어 컬러 추천</h2>
-                        <p>골드 색상을 베이스로 골드 브라운, 갈색 컬러인 미디움, 다크 브라운 등 
-                        <br>봄 웜톤보다는 어두운 계열 브라운의 컬러를 추천해요.
-                        <br>붉은 계열의 버건디나 마르살라는 피하는 것이 좋습니다.
-                        <br>풍성한 웨이브, 갈색, 황색 베이스 염색을 추천합니다.</p>
+                        <h2 class="mb-4">'봄 웜'의 컬러 팔레트</h2>
+                        <p>봄 컬러들은 전체적으로 노란색을 가지고 있는 그룹으로 
+                        <br>밝고 따뜻한 색이 이루어져 있어 활기찬 느낌이 나는 탄력 있는 팔레트입니다.
+                        <br>따라서 봄의 맑은 이미지를 생각하며 스타일링 하는 것을 추천합니다.
+                       <br>봄 타입에게 잘 어울리는 컬러는 
+                       <br>아이보리 베이지와 같은 밝은 톤과 알록달록한 선명한 컬러를 사용할 수 있는데 
+                       <br>대표적인 컬러는 복숭아 핑크, 오렌지 레드, 옐로우, 그린, 퍼플 등
+                       <br>싱그러운 과일이나 햇살을 듬뿍 머금은 선명한 컬러입니다.</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+             <div class="col-md-12 blog-wrap">
+                <div class="row no-gutters align-items-center">
+                   <div class="col-md-6 img js-fullheight">
+                         <c:forEach var="vo" items="${list}" begin="0" end="2" step="1">
+                            <img src = "${vo.item_img_url}" width="300" height="300" style="margin-left: 30%;">
+                         </c:forEach>
+                   </div>
+                   
+                 <div class="col-md-6">
+                     <div class="text p-md-5 p-4 ftco-animate">
+                        <h2 class="mb-4">'봄 웜'에 어울리는 향수</h2>
+                        <br>
+                        <br>
+                        <c:forEach var="vo" items="${list}" begin="0" end="2" step="1">
+                         <div width="300" height="300">
+                            <h3 class="mb-4">${vo.item_name}</h3>
+                            <p style=" font-size: 12px;">${vo.item_tag}</p>
+                            <p style=" font-size: 15px;">${vo.item_explain}</p>
+                            <a style=" font-size: 15px;" href="${vo.item_product_url}">${vo.item_product_url}</a>
+                        </div>
+                          <br>
+                       </c:forEach>
+                     </div>
+                  </div>
+              </div>
+         </div>
+            
+            <div class="col-md-12 blog-wrap">
+               <div class="row no-gutters align-items-center">
+                  <div class="col-md-6 img js-fullheight" style="background-image: url(${pageContext.request.contextPath}/resources/images/springhair2.jpg);"></div>
+                  <div class="col-md-6">
+                     <div class="text p-md-5 p-4 ftco-animate">
+                        <h2 class="mb-4">'봄 웜'의 헤어 컬러 추천</h2>
+                        <p>골드 브라운, 밀크 브라운 등 옐로우 계열의 브라운 컬러를 추천해요.
+                        <br>톤 다운을 고민하는 분들이라면 검정 머리보다는 어두운 브라운 계열이 자연스럽게 이쁘답니다.
+                        <br>곡선의 귀여운 스타일, 옐로우 베이스 염색을 추천해요. </p>
                      </div>
                   </div>
                </div>
             </div>
             <div class="col-md-12 blog-wrap">
                <div class="row no-gutters align-items-center">
-                  <div class="col-md-6 img js-fullheight order-md-last" style="background-image: url(${pageContext.request.contextPath}/resources/images/autumnstar2.jpg);"></div>
+                  <div class="col-md-6 img js-fullheight order-md-last" style="background-image: url(${pageContext.request.contextPath}/resources/images/springstar2.jpg);"></div>
                   <div class="col-md-6">
                      <div class="text p-md-5 p-4 ftco-animate">
-                        <h2 class="mb-4">유사톤을 지닌 '가을 웜' 연예인</h2>
-                        <p>공유, 이진욱, 박성웅, 이민호, 마동석, 전현무</p>
+                        <h2 class="mb-4">유사톤을 지닌 '봄 웜' 연예인</h2>
+                        <p>윤시윤, 정우, 이종석, 차태현, 육성재, 강호동</p>
                      </div>
                   </div>
                </div>
             </div>
-       </section>
+   </section>
 
       
          <jsp:include page="footer.jsp">
@@ -212,11 +199,9 @@
 
       <!-- loader -->
       <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
-
       </div>
     </div>
-
-
+    
     <script src="${pageContext.request.contextPath}/resources/js/jquery.min.js"></script>
     <script src="${pageContext.request.contextPath}/resources/js/jquery-migrate-3.0.1.min.js"></script>
     <script src="${pageContext.request.contextPath}/resources/js/popper.min.js"></script>
@@ -232,6 +217,7 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
     <script src="${pageContext.request.contextPath}/resources/js/google-map.js"></script>
     <script src="${pageContext.request.contextPath}/resources/js/main.js"></script>
+    <script src="${pageContext.request.contextPath}/resources/js/script.js"></script>
     
   </body>
 </html>
