@@ -123,7 +123,7 @@
 					<c:otherwise>
 						<div class="logoutForm">
 							<button class="btn" style="color : white;">${sessionScope.userVO.user_name}</button>
-							<label for="labelLogout">Logout</label>
+							<label for="labelLogout" onclick="logoutFn()">Logout</label>
 							<a id ="labelLogout" type="button" style="display: none;" onclick="logoutFn()">Logout</a> 
 						</div>
 					</c:otherwise>
