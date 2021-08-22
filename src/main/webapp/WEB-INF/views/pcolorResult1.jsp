@@ -82,7 +82,7 @@
 					<c:otherwise>
 						<div class="logoutForm">
 							<button class="btn" style="color : white;">${sessionScope.userVO.user_name}</button>
-							<label for="labelLogout">Logout</label>
+							<label for="labelLogout" onclick="logoutFn()">Logout</label>
 							<a id ="labelLogout" type="button" style="display: none;" onclick="logoutFn()">Logout</a> 
 						</div>
 					</c:otherwise>
@@ -106,35 +106,23 @@
    <section class="ftco-section ftco-no-pb ftco-no-pt">
    			
             <div class="col-md-12 blog-wrap" style="text-align: center;">
-               <div class="row no-gutters align-items-center">
-                  <div class="col-md-6">
-                     <div class="text p-md-5 p-4 ftco-animate">
-                        <h2 class="mb-4"><a>퍼스널컬러 진단의 결과</a></h2>
-                     </div>
-                  </div>
-                  <div class="col-md-6 img js-fullheight">
-                  	 <br><br><br>
-                     <img style="height: 80%; width: 80%;" alt="얼굴이미지" src="${pageContext.request.contextPath}/resources/images/result/<%=imgname%>"> 
-                  </div>
-               </div>
-            </div>
-   
             <div class="col-md-12 blog-wrap">
-               <div class="row no-gutters align-items-center">
-                  <div class="col-md-6 img js-fullheight" style="background-image: url(https://cdn.jsdelivr.net/gh/hoonsbory/mycolor-deploy/images/springColor.png);"></div>
-                  <div class="col-md-6">
-                     <div class="text p-md-5 p-4 ftco-animate">
-						<h2 class="mb-4">당신의 퍼스널 컬러는</h2>
-						<h2 class="mb-4">'봄 웜' 입니다.</h2>
-						<p>한국인의 많은 사람이 봄 웜톤의 피부색을 가지고 있습니다.
-						<br>봄 웜톤인 사람은 봄의 느낌처럼 밝고 노란빛의 피부를 가지고 있습니다.
-						<br>봄 타입은 노란색을 지닌 따듯한 유형으로
-						<br>선명 하고 밝은 톤과 엷은 톤으로 생동감과 에너지를 느끼게 합니다.
-						<br>피부는 밝으면서 매끄럽고 투명한 분들이 많고 피부가 얇아서 주근깨 같은 잡티가 있는 경우도 있습니다.</p>
-                     </div>
-                  </div>
-               </div>
-            </div>
+            		<br>
+	               <div class="row no-gutters align-items-center">
+	                  <img style="height: 50%; width: 50%;" alt="얼굴이미지" src="${pageContext.request.contextPath}/resources/images/result/<%=imgname%>">
+	                  <div class="col-md-6">
+	                     <div class="text p-md-5 p-4 ftco-animate">
+							<h2 class="mb-4">당신의 퍼스널 컬러는</h2>
+							<h2 class="mb-4">'봄 웜' 입니다.</h2>
+							<p>한국인의 많은 사람이 봄 웜톤의 피부색을 가지고 있습니다.
+							<br>봄 웜톤인 사람은 봄의 느낌처럼 밝고 노란빛의 피부를 가지고 있습니다.
+							<br>봄 타입은 노란색을 지닌 따듯한 유형으로
+							<br>선명 하고 밝은 톤과 엷은 톤으로 생동감과 에너지를 느끼게 합니다.
+							<br>피부는 밝으면서 매끄럽고 투명한 분들이 많고 피부가 얇아서 주근깨 같은 잡티가 있는 경우도 있습니다.</p>
+	                     </div>
+	                  </div>
+	               </div>
+	            </div>
             <div class="col-md-12 blog-wrap">
                <div class="row no-gutters align-items-center">
                   <div class="col-md-6 img js-fullheight order-md-last" style="background-image: url(${pageContext.request.contextPath}/resources/images/springSpectrum1.png);">
