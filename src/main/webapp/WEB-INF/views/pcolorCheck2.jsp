@@ -27,6 +27,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     
     <script type="text/javascript">
+    // 로그아웃
 	    function logoutFn(){
 	    	   $.ajax({
 	    	      url: "logout.do",
@@ -37,36 +38,13 @@
 	    	     error:function(){alert("error");}	      
 	    	   });	   
 	    	}
+	    // 로딩중
 	    $(document).ready(function() {
 			$("#div_load_image").hide();
 			$('#take').submit(function(){
 			$("#div_load_image").show();
 			});
-          });
-	
-/*       function callAjax(test, test2){ 
-    	  var sendData; 
-    	  sendData = JSON.stringify({ 
-    		  "test" : test, 
-    		  "test2": test2 
-    		  }); 
-    	  $("#div_load_image").show(); 
-    	  $.ajax({ 
-    		  type : 'POST', 
-    		  url : "/test", 
-    		  contentType: "application/json;charset=UTF-8", 
-    		  data : sendData, 
-    		  dataType : 'json', 
-    		  success : function(data){ // 조회성공 
-    			  $("#div_load_image").hidden(); 
-    		  }, 
-    		  error: function(jqXHR, textStatus, errorThrown){ 
-    			  alert("오류가 발생하였습니다."); 
-    			  $("#div_load_image").hidden(); 
-    			  } 
-    		  }); 
-    	  }
- */
+          });	
 	</script>
 </head>
 <body>

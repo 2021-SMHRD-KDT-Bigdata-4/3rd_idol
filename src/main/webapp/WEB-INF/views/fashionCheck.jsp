@@ -40,6 +40,7 @@
 		    	     error:function(){alert("error");}	      
 		    	   });	   
 		    	}	
+		    // 로딩중
 		    $(document).ready(function() {
 				$("#div_load_image").hide();
 				$('#take').submit(function(){					

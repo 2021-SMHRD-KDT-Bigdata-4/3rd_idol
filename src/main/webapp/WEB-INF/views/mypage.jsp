@@ -42,7 +42,8 @@
                    },
                   error:function(){alert("error");}         
                 });      
-             }          
+             }       
+          // 회원삭제
           function goDel(){
              var user_id=$("#user_id").val();
                 $.ajax({

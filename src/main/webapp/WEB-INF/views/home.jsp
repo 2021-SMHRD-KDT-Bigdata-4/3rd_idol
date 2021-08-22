@@ -29,7 +29,8 @@
 <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/flaticon.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/icomoon.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css">
-	<script type="text/javascript">		
+	<script type="text/javascript">
+			// 로그아웃
 		    function logoutFn(){
 		    	   $.ajax({
 		    	      url: "logout.do",

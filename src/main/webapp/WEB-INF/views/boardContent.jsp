@@ -33,13 +33,15 @@
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript">
+    // 게시글 삭제
     function goDel(board_idx){
         location.href="${cpath}/boardDelete.do?board_idx="+board_idx;
      }
-  
+     // 목록으로 
      function goList(){
         location.href="${cpath}/boardList.do"
      }      
+     // 로그아웃
     function logoutFn(){
           $.ajax({
              url: "logout.do",
@@ -49,7 +51,8 @@
              },
             error:function(){alert("error");}         
           });      
-       }   
+       }  
+    // 댓글 삭제
     function replyDel(reply_idx){
         location.href="${cpath}/replyDelete.do?reply_idx="+reply_idx;
         history.go(0);

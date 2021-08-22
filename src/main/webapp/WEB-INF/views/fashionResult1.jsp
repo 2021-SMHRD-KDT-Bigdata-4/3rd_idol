@@ -74,9 +74,6 @@
          }
       });
    }
-   $(document).ready(function() {
-	   $('html, body').animate({scrollTop:$(#come).position().top}, 'slow');
-	}); 
 </script>
 
 </head>

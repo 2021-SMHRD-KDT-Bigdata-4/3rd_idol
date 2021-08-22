@@ -37,9 +37,11 @@
 	<script
 		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 	<script type="text/javascript">
+			// 회원가입 페이지로 이동
 			function gosignupFn() {
 				location.href = "${cpath}/signup.do";			
 			}		
+			// 로그인 유효성 검사
 		    function loginFn(){
 	             var user_id=$("#user_id").val();
 	             var user_password=$("#user_password").val();
@@ -57,6 +59,7 @@
 	                 error : function(){alert("error");}            
 	             });   
 	          }
+			  // 로그아웃
 	          function logoutFn(){
 	                $.ajax({
 	                   url: "logout.do",

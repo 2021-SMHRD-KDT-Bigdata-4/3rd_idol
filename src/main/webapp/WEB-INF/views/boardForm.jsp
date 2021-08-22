@@ -33,9 +33,11 @@
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript">
+    	// 글쓰기
 		function goWrite() {
 			location.href = "${cpath}/boardForm.do";			
-		}			
+		}		
+    	// 로그아웃
 	    function logoutFn(){
 	    	   $.ajax({
 	    	      url: "logout.do",

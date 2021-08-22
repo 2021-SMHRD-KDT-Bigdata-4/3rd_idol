@@ -35,6 +35,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <script type="text/javascript">
+	// 회원가입
 	function signupFn() {
 		var signData = $("#srm").serialize();
 		$.ajax({
@@ -50,7 +51,7 @@
 			}
 		});
 	}
-
+	// 비밀번호 일치여부 검사
 	$(function() {
 		//비밀번호 확인
 		$(".pw1").hide();

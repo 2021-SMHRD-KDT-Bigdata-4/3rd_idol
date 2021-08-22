@@ -40,6 +40,7 @@
                   error:function(){alert("error");}         
                 });      
              }  
+          // 로그인 안하면 못하게 막기!
           function checkLogin(){
           	var user_id=$("#user_id").val();
               var user_password=$("#user_password").val();

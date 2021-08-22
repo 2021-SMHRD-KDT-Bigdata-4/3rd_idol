@@ -29,11 +29,11 @@ public class userController {
    @Inject
    private UserMapper userMapper;
 
-   
+   // 로그인 페이지 이동
    @RequestMapping("login.do")
    public void login() {   
    }
-   
+   // 로그인 인증검사
    @RequestMapping("/loginUser.do")
    public void loginUser(UserVO vo, HttpServletRequest request, HttpServletResponse response, Model model) throws ServletException, IOException {      
       String user_id = request.getParameter("user_id");
@@ -52,36 +52,29 @@ public class userController {
          out.print("NO");   // 인증에 실패(0)
       }
    }
-   
-//   @RequestMapping("getLogin.do")
-//   public void getLogin (Model model, String user_id) {
-//	   UserVO vo = userMapper.userList(user_id);
-//	   model.addAttribute("vo", vo);
-//   }
-   
-   
+   // 로그이웃
    @RequestMapping("logout.do")
    public void logout(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
       HttpSession session = request.getSession(); 
       session.invalidate();
    }
-   
+   // 회원가입 페이지 이동
    @RequestMapping("/signup.do")
    public void signup() {      
    }
-   
+   // 회원가입 인서트
    @RequestMapping("/userInsert.do")
    public String insertUser(UserVO vo) {
       userMapper.insertUser(vo);
       return "redirect:/home.do";
    }
-   
+   // 마이페이지 값 불러오기
    @RequestMapping("/mypage.do")
    public void mypage(Model model, String user_id) {      
       UserVO vo = userMapper.userList(user_id);
       model.addAttribute("vo", vo);
    }
-   
+   // 게시판 수정
    @RequestMapping("userUpdate.do")
    public String userUpdate(UserVO vo, Model model) {
       userMapper.userUpdate(vo);
@@ -89,6 +82,7 @@ public class userController {
       model.addAttribute("vo", vo);
       return "redirect:/mypage.do?user_id="+vo.getUser_id();//수정페이지에서 현재로그인 한 사람의 아이디를 기준을 검색해서 update페이지에서 보여주는데 수정을 하고나면 그 아이디값을 보내지 않아서 안나왔던것같아요
    }
+   //게시판 삭제
    @RequestMapping("userDelete.do")
    public String userDelete(String user_id, HttpServletRequest request) throws ServletException, IOException {
       userMapper.userDelete(user_id); 
@@ -96,11 +90,7 @@ public class userController {
       session.invalidate();
       return "redirect:/home.do";
    }
-//   @RequestMapping("userCheck.do")
-//   public void checkUser(String user_id) {
-//      userMapper.checkUser(user_id);
-//   }
-   
+   // 진단페이지 이동
    @RequestMapping("/goResult.do")
    public String goResult(String user_id) {
 	   int result = userMapper.goResult(user_id);
